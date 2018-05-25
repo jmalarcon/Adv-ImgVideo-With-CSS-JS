@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cubo 3D</title>
+	<link type="text/css" rel="stylesheet" href="cubo3d.css">
+    <style>
+        .cara {
+            opacity: 0.8;
+        }
+        
+        .anterior {
+            background-image: url(./imgs/anterior.jpg);
+        }
+        .posterior {
+            background-image: url(./imgs/posterior.jpg);
+        }
+        .izquierda {
+            background-image: url(./imgs/izquierda.jpg);
+        }
+        .derecha {
+            background-image: url(./imgs/derecha.jpg);
+        }
+        .superior {
+            background-image: url(./imgs/superior.jpg);
+        }
+        .inferior {
+            background-image: url(./imgs/inferior.jpg);
+        }
+        
+        #escena:hover {
+            transform:rotateX(30deg);
+            transition: transform 1s linear;
+        }
+        
+        #escena {
+            transition: transform 1s linear;
+        }
+
+        #cubo {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+	<div id="escena">
+		<div id="cubo" class="cubo">
+			<div class="cara anterior"></div>
+			<div class="cara posterior"></div>
+			<div class="cara izquierda"></div>
+			<div class="cara derecha"></div>
+			<div class="cara superior"></div>
+			<div class="cara inferior"></div>
+		</div>
+    </div>
+    <script>
+        //Parar o reanudar animación en caso de pulsar encima del cubo
+        document.getElementById("cubo").addEventListener('click', function(ev){
+            if (this.style.animationPlayState == "" || this.style.animationPlayState == "running")
+                this.style.animationPlayState = "paused";
+            else
+            this.style.animationPlayState = "running";
+        });
+    </script>
+</body>
+</html>

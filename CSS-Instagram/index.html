@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clon de instagram con tan solo CSS3</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/instagram.css">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+    
+              <div id ="Foto" class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <div id="MainImageContainer"><img id="MainImage" class="card-img-top" src="imgs/imagen-comodin.png" alt="Imagen a aplicar los filtros"></div>
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button id="Cargar" type="button" class="btn btn-sm btn-outline-secondary">Cargar</button>
+                          <input id="SelectorArchivos" type="file" accept="image/*" style="display:none;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+
+            <div class="row">
+                <div  id ="Previews" class="col-md-12 text-center d-none">
+                    <div class="preview"><div class="filter-ninguno"><img></div><small class="text-muted">Ninguno</small></div>
+                    <div class="preview"><div class="filter-1977"><img></div><small class="text-muted">1977</small></div>
+                    <div class="preview"><div class="filter-aden"><img></div><small class="text-muted">Aden</small></div>
+                    <div class="preview"><div class="filter-amaro"><img></div><small class="text-muted">Amaro</small></div>
+                    <div class="preview"><div class="filter-ashby"><img></div><small class="text-muted">Ashby</small></div>
+                    <div class="preview"><div class="filter-brannan"><img></div><small class="text-muted">Brannan</small></div>
+
+                    <div class="preview"><div class="filter-brooklyn"><img></div><small class="text-muted">Brooklyn</small></div>
+                    <div class="preview"><div class="filter-charmes"><img></div><small class="text-muted">Charmes</small></div>
+                    <div class="preview"><div class="filter-clarendon"><img></div><small class="text-muted">Clarendon</small></div>
+                    <div class="preview"><div class="filter-crema"><img></div><small class="text-muted">Crema</small></div>
+                    <div class="preview"><div class="filter-dogpatch"><img></div><small class="text-muted">Dogpatch</small></div>
+                    <div class="preview"><div class="filter-earlybird"><img></div><small class="text-muted">Earlybird</small></div>
+
+                    <div class="preview"><div class="filter-gingham"><img></div><small class="text-muted">Gingham</small></div>
+                    <div class="preview"><div class="filter-ginza"><img></div><small class="text-muted">Ginza</small></div>
+                    <div class="preview"><div class="filter-hefe"><img></div><small class="text-muted">Hefe</small></div>
+                    <div class="preview"><div class="filter-helena"><img></div><small class="text-muted">Helena</small></div>
+                    <div class="preview"><div class="filter-hudson"><img></div><small class="text-muted">Hudson</small></div>
+                    <div class="preview"><div class="filter-inkwell"><img></div><small class="text-muted">Inkwell</small></div>
+
+                    <div class="preview"><div class="filter-kelvin"><img></div><small class="text-muted">Kelvin</small></div>
+                    <div class="preview"><div class="filter-juno"><img></div><small class="text-muted">Juno</small></div>
+                    <div class="preview"><div class="filter-lark"><img></div><small class="text-muted">Lark</small></div>
+                    <div class="preview"><div class="filter-lofi"><img></div><small class="text-muted">Lo-Fi</small></div>
+                    <div class="preview"><div class="filter-ludwig"><img></div><small class="text-muted">Ludwig</small></div>
+                    <div class="preview"><div class="filter-maven"><img></div><small class="text-muted">Maven</small></div>
+
+                    <div class="preview"><div class="filter-mayfair"><img></div><small class="text-muted">Mayfair</small></div>
+                    <div class="preview"><div class="filter-moon"><img></div><small class="text-muted">Moon</small></div>
+                    <div class="preview"><div class="filter-nashville"><img></div><small class="text-muted">Nashville</small></div>
+                    <div class="preview"><div class="filter-perpetua"><img></div><small class="text-muted">Perpetua</small></div>
+                    <div class="preview"><div class="filter-poprocket"><img></div><small class="text-muted">Poprocket</small></div>
+                    <div class="preview"><div class="filter-reyes"><img></div><small class="text-muted">Reyes</small></div>
+
+                    <div class="preview"><div class="filter-rise"><img></div><small class="text-muted">Rise</small></div>
+                    <div class="preview"><div class="filter-sierra"><img></div><small class="text-muted">Sierra</small></div>
+                    <div class="preview"><div class="filter-skyline"><img></div><small class="text-muted">Skyline</small></div>
+                    <div class="preview"><div class="filter-slumber"><img></div><small class="text-muted">Slumber</small></div>
+                    <div class="preview"><div class="filter-stinson"><img></div><small class="text-muted">Stinson</small></div>
+                    <div class="preview"><div class="filter-sutro"><img></div><small class="text-muted">Sutro</small></div>
+
+                    <div class="preview"><div class="filter-toaster"><img></div><small class="text-muted">Toaster</small></div>
+                    <div class="preview"><div class="filter-valencia"><img></div><small class="text-muted">Valencia</small></div>
+                    <div class="preview"><div class="filter-vesper"><img></div><small class="text-muted">Vesper</small></div>
+                    <div class="preview"><div class="filter-walden"><img></div><small class="text-muted">Walden</small></div>
+                    <div class="preview"><div class="filter-willow"><img></div><small class="text-muted">Willow</small></div>
+                    <div class="preview"><div class="filter-xpro-ii"><img></div><small class="text-muted">X-Pro II</small></div>
+
+                    <!-- FILTROS INVENTADOS POR MI -->
+                    <div class="preview"><div class="filter-blur"><img></div><small class="text-muted">Blur (propio)</small></div>
+                    <div class="preview"><div class="filter-predator"><img></div><small class="text-muted">Predator (propio)</small></div>
+                    <div class="preview"><div class="filter-grinch"><img></div><small class="text-muted">Grinch (propio)</small></div>
+                    <div class="preview"><div class="filter-xray"><img></div><small class="text-muted">X-Ray (SVG)</small></div>
+                    <div class="preview"><div class="filter-thermal"><img></div><small class="text-muted">Thermal (SVG)</small></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SVG Filters - Fuente: http://www.blattchat.com -->
+    <svg width="0%" height="0%">
+        <defs>
+        <filter id="EmbossFilter" >
+          <feConvolveMatrix order="5 5"
+            preserveAlpha="true" 
+            kernelMatrix="-1 0 0 0 0 0 -2 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0"/>
+        </filter>
+        
+        <filter id="SharpenFilter">
+          <feConvolveMatrix order="3 3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0"/>
+        </filter>
+        
+        <filter id="EdgeDetectFilter">
+          <feConvolveMatrix order="3 3" preserveAlpha="true" kernelMatrix="-5 0 0 0 0 0 0 0 5"/>
+        </filter>
+        
+        <filter id="LuminanceMaskFilter">
+          <feColorMatrix type="luminanceToAlpha"/>
+        </filter>
+        
+        <filter id="GaussianBlurFilter">
+          <feGaussianBlur stdDeviation="10 1"/>
+        </filter>
+        
+        <filter id="GradientMapFilter">
+         <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"> </feColorMatrix>
+         <feComponentTransfer >
+            <feFuncR type="table" 
+              tableValues="0 1 0 1"/>
+            <feFuncG type="table" 
+              tableValues="0 0 0.4 1"/>
+            <feFuncB type="table" 
+              tableValues="0 0 .4 1"/>
+         </feComponentTransfer>
+        </filter>  
+        
+        <filter id="PosterizeFilter">
+          <feComponentTransfer>
+          <feFuncR type="discrete" 
+              tableValues="0 0.25 0.5 0.75 1"/>
+          <feFuncG type="discrete" 
+              tableValues="0 0.25 0.5 0.75 1"/>
+          <feFuncB type="discrete" 
+              tableValues="0 0.25 0.5 0.75 1"/>
+        </feComponentTransfer>
+        </filter>
+          
+        <filter id="GrayScaleFilter">
+         <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" />
+        </filter>
+        
+        <filter id="XRayFilter">
+         <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" />
+         <feComponentTransfer >
+            <feFuncR type="table" tableValues="1 0"/>
+            <feFuncG type="table" tableValues="1 0"/>
+            <feFuncB type="table" tableValues="1 0"/>
+         </feComponentTransfer>  
+        </filter>
+          
+          <filter id="WashoutFilter" filterUnits="objectBoundingBox" 
+                    x="0%" y="0%" width="100%" height="100%">
+            <feFlood flood-color="#ffffff" flood-opacity="0.5" result="flood"/>
+            <feBlend mode="screen" in2="flood" in="SourceGraphic"/>   
+          </filter>   
+        </defs>
+      </svg>  
+
+    <script src="js/app.js"></script>
+</body>
+</html>

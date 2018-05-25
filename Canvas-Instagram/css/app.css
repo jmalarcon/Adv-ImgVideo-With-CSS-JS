@@ -1,0 +1,62 @@
+.box-shadow { 
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}
+
+#MainImage {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#Previews {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#Previews > div {
+    float: none;
+    display: inline-block;
+}
+
+#Previews div::before {
+        cursor: pointer;
+}
+
+[class*="filter"]::before {
+    content: "";
+}
+
+.preview {
+    float:left;
+    margin: 0.3em;
+}
+
+.preview img {
+    max-width: 100px;
+}
+
+.text-muted {
+    display:block;
+    text-align: center;
+}
+
+/* Filtros propios */
+.filter-blur {
+    filter: blur(3px);
+}
+
+.filter-predator {
+    filter: invert(100%) hue-rotate(90deg);
+}
+
+.filter-grinch {
+    filter: hue-rotate(90deg) saturate(5);
+}
+
+/* SVG */
+.filter-xray {
+    filter: url(#XRayFilter);
+}
+
+.filter-thermal {
+    filter: url(#GradientMapFilter);
+}

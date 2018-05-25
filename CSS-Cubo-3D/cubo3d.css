@@ -1,0 +1,79 @@
+﻿/* DEMO CREACIÓN DE UN CUBO EN 3D
+José Manuel Alarcón Aguín
+campusMVP.es
+  ___ __ _ _ __ ___  _ __  _   _ ___ _ __ _____   ___ __   ___ ___ 
+ / __/ _` | '_ ` _ \| '_ \| | | / __| '_ ` _ \ \ / | '_ \ / _ / __|
+| (_| (_| | | | | | | |_) | |_| \__ | | | | | \ V /| |_) |  __\__ \
+ \___\__,_|_| |_| |_| .__/ \__,_|___|_| |_| |_|\_/ | .__(_\___|___/
+                    |_|                            |_|             
+*/
+body{
+	margin-top:100px;
+}
+
+/* Animación cubo*/
+@keyframes rotar {
+	from {
+		transform:rotateY(0);
+	}
+	
+	to {
+		transform:rotateY(360deg);
+	}
+}
+
+/* Definición del cubo */
+#escena {
+	perspective: 800px;
+	transform-style: preserve-3d;
+	transform: rotateY(360deg) rotateX(-30deg);
+}
+
+.cubo {
+	position:relative;
+	width:200px;
+	margin:0 auto;
+	transform-style: preserve-3d;
+	animation: rotar 4s infinite ease;
+}
+
+.cubo .cara {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	font-size: 1.5em;
+	color: gray;
+	text-align: center;
+	line-height:200px;
+}
+
+.cara.anterior {
+	background-color: rgba(255,0,0,0.2);
+	transform: translateZ(100px);
+}
+
+.cara.posterior {
+	background-color: rgba(255,216,0,0.2);
+	transform: translateZ(-100px) rotateY(180deg);
+}
+
+.cara.derecha {
+	background-color: rgba(128,128,128,0.2);
+	transform: translateX(100px) rotateY(90deg);
+}
+
+.cara.izquierda {
+	background-color: rgba(178,0, 255,0.2);
+	transform: translateX(-100px) rotateY(-90deg);
+}
+
+.cara.superior {
+	background-color: rgba(0,0,255,0.2);
+	transform: translateY(-100px) rotateX(90deg);
+}
+
+.cara.inferior {
+	background-color: rgba(0,255,0,0.2);
+	transform: translateY(100px) rotateX(-90deg) rotateY(180deg);
+}

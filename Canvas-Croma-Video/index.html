@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroma en vídeo</title>
+    <style>
+        #croma {
+                display: block;
+                padding: 0;
+                margin: 0 auto;
+                background: url('imgs/seattle.jpg') no-repeat;
+        }
+
+        #videoBase {
+            width:320px;
+            height:180;
+            display: block;
+            margin:0 auto;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <video id="videoBase" playsinline loop controls></video>
+    <canvas id="croma" width="1280" height="720"></canvas>
+    <script src="croma.js"></script>
+</body>
+</html>
