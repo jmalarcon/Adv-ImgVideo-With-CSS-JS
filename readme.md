@@ -1,4 +1,4 @@
-# Por qué Superman lleva los calzoncillos por fuera (y qué tiene que ver esto con tu navegador)
+# Advanced image and video manipulation with pure CSS and JavaScript
 ## Ejemplos de código de la ponencia de José Manuel Alarcón en la DotNet2018
 
 ![Imagen de portada de la presentación](portada.png)
